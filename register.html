@@ -1,0 +1,143 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Volunteer Registration Form- Mission Food Pantry</title>
+<style>
+body{
+font-family:Calibri;
+background-color:rgb(128,128,0);
+}
+.header
+{
+background-color:white;
+float:right;
+position:fixed;
+height:149px;
+width:100%;
+top:0;
+left:0;
+}.navbar-tabs
+{
+background-color:white;
+padding:60px 20px;
+margin:0px 2px;
+vertical-align:middle;
+float:right; 
+}
+a
+{
+font-family:Calibri;
+font-weight:bold;
+font-size:20px;
+text-decoration:none;
+color:black;
+}
+.navbar-tabs:hover{
+background-color:orange;
+}
+#active
+{
+background-color:orange;
+}
+.footer{
+background-color:rgba(255,255,255,0.8);
+padding:30px;
+font-family:calibri;
+font-weight:bold;
+text-align:center; 
+top:700px;
+}
+.social  {border-radius:10px;}
+#form{
+padding:15px;
+cell-spacing:7px;
+border-bottom:3px solid black;
+margin:auto;
+font-family:Times New Roman;
+font-size:16px;
+font-weight:bold;
+}
+</style>
+<script language="javascript">
+function validateform()
+{
+var uname=document.forms["form1"]["box1"].value;
+var mb=document.form1.number.value;
+var email=document.form1.emailid.value;
+var city=document.form1.city.value;
+if(uname==null||uname=="")
+alert("Name can't be blank");
+return false;
+else if (mb.length<10)
+alert("Mobile number must be at least 10 digits");
+return false;
+else (
+if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.form1.emailid.value))
+  {
+    return true;
+  }
+    alert("You have entered an invalid email address!")
+    return false;
+})}
+</script>
+
+</head>
+<body>
+
+<div class="header" height="149px" width="150px">
+<img src="logo.png" height="149px" width="150px">
+
+
+<span class="navbar-tab"><a href="join.html"><div class="navbar-tabs">Join Now</div></a></span>
+<span class="navbar-tab"><a href="#footer"><div class="navbar-tabs">Contact Us</div></a></span>
+
+<span class="navbar-tab"><div class="navbar-tabs"  id="active"><a href="">Register</div></a></span>
+<span class="navbar-tab"><a href="index.html"><div class="navbar-tabs">Home</div></a></span>
+
+<div id="form">
+
+<h2>
+Become a volunteer</h2>
+
+<form name="form1"  action="registration-success.html" onsubmit="return validateform()" method="post">
+
+
+
+Select how you would like to help:
+<br>
+
+<select name="dropdown" placeholder="Select how you would like to help:" >
+<option>Volunteer time</option>
+<option>Donate food</option><option>Become a partner Restaurant</option>
+<option>Teach</option>
+</select><br>
+Enter your name  <br> <input type="text" name="box1" placeholder="Enter your name" ><br>
+Mobile Number    <br> <input type="text" name="number" placeholder="Mobile Number" maxlength="10"><br>
+Date of Birth    <br> <input type="text" name="dob" placeholder="dd-mm-yyyy"><br>
+Email id      <br>    <input type="text" name="emailid" placeholder="abc@gmail.com"><br>
+City        <br>  <input type="text" name="city" placeholder="City"><br><br>
+<input type="submit" name="submitbtn" value="Submit">
+
+
+
+
+
+</form>
+
+
+</div>
+
+
+
+<div class="footer" id="footer"><p class="Contact">Contact us @ 1800-xx-xx</p>
+<p>Mail Us: missionfoodpantry@gmail.com</p>
+<p>Copyright &copy Mission Food Pantry</p>
+<img src="youtube.png" width="50px" height="50px" class="social">
+<img src="insta.png" width="50px" height="50px" class="social">
+<img src="twitter.png" width="50px" height="50px" class="social">
+
+</div>
+</body>
+</html>
